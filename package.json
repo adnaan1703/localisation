@@ -1,0 +1,16 @@
+{
+  "name": "localisation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "runner": "node runner.js"
+  },
+  "author": "adnaan",
+  "license": "ISC",
+  "dependencies": {
+    "intl-format-cache": "^2.1.0",
+    "intl-messageformat": "^2.2.0"
+  }
+}
