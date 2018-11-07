@@ -12,8 +12,9 @@ const intlFetchData = function () {
 };
 
 const intlCachedFetchData = function () {
+    const getFormat = memoizeFormatConstructor(IntlMessageFormat);
     for (let i = 0; i < config.ITERATION; i++) {
-        const intlFormat = memoizeFormatConstructor(IntlMessageFormat)(en.HELLO, 'en-US');
+        const intlFormat = getFormat(en.HELLO, 'en-US');
         const output = intlFormat.format({name: 'Adnaan'});
     }
 };

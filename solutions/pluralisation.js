@@ -3,7 +3,6 @@ const {config} = require("../config");
 const IntlMessageFormat = require("intl-messageformat");
 const memoizeFormatConstructor = require('intl-format-cache');
 
-
 const intlFetchData = function () {
     for (let i = 0; i < config.ITERATION; i++) {
         let output;
@@ -15,9 +14,10 @@ const intlFetchData = function () {
 };
 
 const intlCachedFetchData = function () {
+    const getFormat = memoizeFormatConstructor(IntlMessageFormat);
     for (let i = 0; i < config.ITERATION; i++) {
         let output;
-        const enNumPhotos = memoizeFormatConstructor(IntlMessageFormat)(en.NUM_PHOTOS, 'en-US');
+        const enNumPhotos = getFormat(en.NUM_PHOTOS, 'en-US');
         output = enNumPhotos.format({numPhotos: 0});
         output = enNumPhotos.format({numPhotos: 1});
         output = enNumPhotos.format({numPhotos: 10});
