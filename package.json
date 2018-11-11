@@ -4,19 +4,29 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build && npm run runner",
+    "add-locale": "lingui add-locale",
+    "extract": "lingui extract",
+    "compile": "lingui compile",
+    "lingui-build": "npm run extract && npm run compile",
+    "start": "npm run lingui-build && npm run babel-build",
     "runner": "node lib/index.js",
-    "build": "babel src -d lib"
+    "build": "babel src -d lib",
+    "babel-build": "npm run build && npm run runner",
+    "clean": "rm -rf lib"
   },
   "author": "adnaan",
   "license": "ISC",
   "dependencies": {
+    "@lingui/core": "^2.7.0",
     "intl-format-cache": "^2.1.0",
     "intl-messageformat": "^2.2.0"
   },
   "devDependencies": {
+    "@lingui/cli": "^2.7.0",
+    "@lingui/macro": "^2.7.0",
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-macros": "^2.4.2",
     "babel-preset-env": "^1.7.0"
   }
 }

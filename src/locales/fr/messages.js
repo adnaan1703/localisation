@@ -1,0 +1,1 @@
+/* eslint-disable */module.exports={languageData:{"plurals":function(n,ord){if(ord)return n==1?"one":"other";return n>=0&&n<2?"one":"other"}},messages:{"Hello {name}":function(a){return["Bonjour ",a("name")]},"{0, plural, =0 {no book} =1 {one book} other {# books}}":function(a){return[a("0","plural",{0:"no book",1:"one book",other:["#"," books"]})]}}};

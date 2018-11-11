@@ -1,0 +1,10 @@
+{
+  "Hello {name}": {
+    "origin": [
+      [
+        "src/solutions/basic.js",
+        27
+      ]
+    ]
+  }
+}

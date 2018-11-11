@@ -11,11 +11,13 @@ obs.observe({entryTypes: ['function']});
 console.log(`\n<<<<<BASIC OPERATIONS: ${ITERATION} ITERATIONS>>>>>`);
 performance.timerify(basic.intlFetchData)();
 performance.timerify(basic.intlCachedFetchData)();
+performance.timerify(basic.linguiFetchData)();
 performance.timerify(basic.intlCustomFetchData)();
 
 console.log(`\n<<<<<PLURAL OPERATIONS: ${ITERATION} ITERATIONS>>>>>`);
 performance.timerify(plural.intlFetchData)();
 performance.timerify(plural.intlCachedFetchData)();
+performance.timerify(plural.linguiFetchData)();
 performance.timerify(plural.intlCustomFetchData)();
 
 obs.disconnect();

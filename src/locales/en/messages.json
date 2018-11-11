@@ -1,0 +1,4 @@
+{
+  "Hello {name}": "Hello {name}",
+  "{0, plural, =0 {no book} =1 {one book} other {# books}}": "{0, plural, =0 {no book} =1 {one book} other {# books}}"
+}
