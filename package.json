@@ -2,15 +2,22 @@
   "name": "localisation",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node runner.js"
+    "start": "npm run build && npm run runner",
+    "runner": "node lib/index.js",
+    "build": "babel src -d lib"
   },
   "author": "adnaan",
   "license": "ISC",
   "dependencies": {
     "intl-format-cache": "^2.1.0",
     "intl-messageformat": "^2.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5"
   }
 }
